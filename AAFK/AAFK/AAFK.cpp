@@ -267,7 +267,7 @@ int main()
         cin >> website;
         cout << "you have 1 minute left before the window opens!\n";
         ShellExecuteA(NULL, "open", website.c_str(), NULL, NULL, SW_SHOWDEFAULT);
-        while (time == timeown) {
+        while (time < timeown) {
             Sleep(60000);
             const int KEYEVENT_KEYUP = 0x02;
             keybd_event(VK_LCONTROL, 0, KEYEVENTF_KEYDOWN, 0);
